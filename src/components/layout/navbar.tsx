@@ -100,7 +100,7 @@ export function Navbar() {
             <SheetContent
               aria-describedby="mobile-menu-desc"
               aria-labelledby="mobile-menu-title"
-              className="w-80 bg-sky-100/95 backdrop-blur-3xl"
+              className="z-9999 w-80 bg-sky-100/95 backdrop-blur-3xl"
               id="mobile-menu"
               side="right"
             >
@@ -112,7 +112,7 @@ export function Navbar() {
                   Mobile navigation menu with links to main sections of the website
                 </p>
               </SheetHeader>
-              <nav aria-label="Mobile navigation" className="mt-8 flex flex-col gap-4" role="navigation">
+              <nav aria-label="Mobile navigation" className="mt-4 flex flex-col gap-2 px-4 font-sans" role="navigation">
                 <SheetClose asChild>
                   <Link
                     aria-describedby="mobile-story-desc"
