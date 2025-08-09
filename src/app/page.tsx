@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main>
       <header className="bg-sky-100">
-        <div className="container relative grid min-h-[calc(100svh-3.875rem-1px)] max-w-7xl grid-cols-12 gap-3 border-x py-28">
-          <div className="col-span-6">
+        <div className="container relative grid max-w-7xl grid-cols-12 border-x">
+          <div className="col-span-7 py-28 pr-24">
             <Badge variant="outline">Empowering People. Enriching Communities.</Badge>
             <h1 className="mt-4 font-sans text-7xl">
               In loving memory of <span className="font-medium text-sky-600">Reena</span>
@@ -24,16 +24,13 @@ export default function Home() {
               <Button variant="outline">Our Mission</Button>
             </div>
           </div>
-          <div className="col-span-5">
-            <div className="flex items-center gap-2">
-              <div className="size-1.5 rounded-full bg-white" />
-              <div className="size-1.5 rounded-full bg-white" />
-            </div>
+          <div className="relative col-span-5 border-l">
+            <div className="-top-1 -left-1 absolute z-1999 size-1.5 rounded-full bg-white" />
           </div>
         </div>
       </header>
-      <section className="relative">
-        <div className="-mt-[15ch] container relative max-w-7xl border-x px-0 pb-16">
+      <section className="relative bg-gradient-to-b from-50% from-sky-100 to-50% to-background">
+        <div className="container relative max-w-7xl border-x px-0 pb-16">
           <div className="relative bg-sky-200 p-2.5">
             <div className="grid grid-cols-12 rounded-2xl bg-white">
               <div className="col-span-5 flex flex-col justify-between border-r p-7">
