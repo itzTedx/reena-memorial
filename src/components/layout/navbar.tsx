@@ -12,18 +12,26 @@ export function Navbar() {
           <Logo />
           <LogoWordMark />
         </Link>
-        <ul className="flex items-center gap-4">
+        <ul className="flex items-center gap-2 font-medium font-sans">
           <li>
-            <Link href="#story">Her Story</Link>
+            <Link className="rounded-md px-4 py-2.5 transition-colors hover:bg-white" href="/#story">
+              Her Story
+            </Link>
           </li>
           <li>
-            <Link href="#mission">Mission</Link>
+            <Link className="rounded-md px-4 py-2.5 transition-colors hover:bg-white" href="/#mission">
+              Mission
+            </Link>
           </li>
           <li>
-            <Link href="/gallery">Photo Gallery</Link>
+            <Link className="rounded-md px-4 py-2.5 transition-colors hover:bg-white" href="/gallery">
+              Photo Gallery
+            </Link>
           </li>
         </ul>
-        <Button>Contact</Button>
+        <Button className="rounded-full border-sky-200 border-b bg-gradient-to-b from-sky-700 to-sky-900">
+          Contact
+        </Button>
         <span aria-hidden="true" className="-bottom-1 -left-1 absolute z-1 size-1.5 rounded-full bg-white" />
         <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
       </div>

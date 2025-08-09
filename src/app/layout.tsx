@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { didactGothic, helvetica } from "@/assets/fonts";
+import { Cta } from "@/components/layout/cta";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         <div className="fixed top-0 h-[calc(3.875rem-1px)] w-full bg-sky-100" />
         {children}
+        <Cta />
         <Footer />
       </body>
     </html>

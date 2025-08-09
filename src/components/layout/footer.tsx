@@ -10,8 +10,8 @@ export function Footer() {
     <footer className="bg-sky-100">
       <div className="container relative max-w-7xl border-x pb-20">
         <div className="mx-auto grid max-w-5xl grid-cols-3 gap-14">
-          <div>
-            <Badge className="font-light text-base text-muted tracking-wide" variant="outline">
+          <div className="flex flex-col justify-center gap-6">
+            <Badge className="tracking-wide" variant="outline">
               Remembered with <IconHeart className="!size-6 shrink-0" />
             </Badge>
             <h2 className="font-light font-sans text-3xl">

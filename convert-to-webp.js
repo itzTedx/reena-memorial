@@ -1,9 +1,14 @@
-const fs = require('node:fs')
-const path = require('node:path')
-const sharp = require('sharp')
+import sharp from 'sharp'
 
-const inputDir = path.join(__dirname, 'public', 'images')
-const outputDir = path.join(__dirname, 'public', 'images')
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const inputDir = path.join(__dirname, 'public', 'images', 'gallery')
+const outputDir = path.join(__dirname, 'public', 'images', 'gallery')
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(outputDir)) {
@@ -30,25 +35,31 @@ async function convertToWebP() {
       const fileNameWithoutExt = path.parse(file).name
       const outputPath = path.join(outputDir, `${fileNameWithoutExt}.webp`)
 
-      // biome-ignore lint/suspicious/noConsole: i have to
-      console.log(`Converting ${file} to WebP...`)
+      console.log(`Converting ${file} to WebP with 60% size reduction...`)
 
-      await sharp(filePath).webp({ quality: 80 }).toFile(outputPath)
+      // Get original image metadata to calculate new dimensions
+      const metadata = await sharp(filePath).metadata()
+      const newWidth = Math.round(metadata.width * 0.4)
+      const newHeight = Math.round(metadata.height * 0.4)
 
-      // biome-ignore lint/suspicious/noConsole: i have to
-      console.log(`✓ Converted ${file} -> ${fileNameWithoutExt}.webp`)
+      await sharp(filePath)
+        .resize(newWidth, newHeight)
+        .webp({ quality: 80 })
+        .toFile(outputPath)
+
+      console.log(
+        `✓ Converted ${file} -> ${fileNameWithoutExt}.webp (${metadata.width}x${metadata.height} -> ${newWidth}x${newHeight})`
+      )
 
       return fileNameWithoutExt
     })
 
     await Promise.all(conversions)
 
-    // biome-ignore lint/suspicious/noConsole: i have to
     console.log('\n🎉 All images converted successfully!')
-    // biome-ignore lint/suspicious/noConsole: i have to
+
     console.log(`Converted images are saved in: ${outputDir}`)
   } catch (error) {
-    // biome-ignore lint/suspicious/noConsole: i have to
     console.error('Error converting images:', error)
   }
 }
