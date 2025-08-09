@@ -7,6 +7,7 @@ import { IconHeart } from "@/assets/icons/heart";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { BASE_URL } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "Reena Memorial - In Loving Memory of a Compassionate Nurse",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Reena Memorial - Honoring a Compassionate Nurse's Legacy",
     description:
       "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her compassion and dedication live on through nursing scholarships, community health projects, and acts of kindness.",
-    url: "https://reena-memorial.com",
+    url: BASE_URL,
     type: "website",
   },
   twitter: {
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met.",
   },
   alternates: {
-    canonical: "https://reena-memorial.com",
+    canonical: BASE_URL,
   },
 };
 
@@ -33,7 +34,7 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://reena-memorial.com/#person",
+      "@id": `${BASE_URL}/#person`,
       name: "Reena",
       jobTitle: "Nurse",
       description:
@@ -41,18 +42,18 @@ const structuredData = {
       knowsAbout: ["Nursing", "Healthcare", "Patient Care", "Community Service", "Mentorship"],
       image: {
         "@type": "ImageObject",
-        url: "https://reena-memorial.com/images/gallery/mother.webp",
+        url: `${BASE_URL}/images/gallery/mother.webp`,
         description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
       },
     },
     {
       "@type": "Organization",
-      "@id": "https://reena-memorial.com/#organization",
+      "@id": `${BASE_URL}/#organization`,
       name: "Reena Memorial Foundation",
-      url: "https://reena-memorial.com",
+      url: BASE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://reena-memorial.com/images/gallery/mother.webp",
+        url: `${BASE_URL}/images/gallery/mother.webp`,
       },
       description:
         "A memorial foundation dedicated to continuing Reena's legacy through nursing scholarships, community health projects, and acts of kindness.",
@@ -88,32 +89,32 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://reena-memorial.com/#website",
-      url: "https://reena-memorial.com",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
       name: "Reena Memorial",
       description:
         "Honoring the life and legacy of Reena, a dedicated nurse who touched countless lives with compassion and kindness.",
       publisher: {
-        "@id": "https://reena-memorial.com/#organization",
+        "@id": `${BASE_URL}/#organization`,
       },
       inLanguage: "en-US",
     },
     {
       "@type": "WebPage",
-      "@id": "https://reena-memorial.com/#webpage",
-      url: "https://reena-memorial.com",
+      "@id": `${BASE_URL}/#webpage`,
+      url: BASE_URL,
       name: "Home - Honoring Reena's Legacy of Compassionate Care",
       description:
         "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her compassion and dedication live on through nursing scholarships, community health projects, and acts of kindness.",
       isPartOf: {
-        "@id": "https://reena-memorial.com/#website",
+        "@id": `${BASE_URL}/#website`,
       },
       about: {
-        "@id": "https://reena-memorial.com/#person",
+        "@id": `${BASE_URL}/#person`,
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://reena-memorial.com/images/gallery/mother.webp",
+        url: `${BASE_URL}/images/gallery/mother.webp`,
         description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
       },
       datePublished: "2024-01-01T00:00:00Z",

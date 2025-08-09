@@ -5,6 +5,7 @@ import { didactGothic, helvetica } from "@/assets/fonts";
 import { Cta } from "@/components/layout/cta";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { BASE_URL } from "@/data/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://reena-memorial.com",
+    url: BASE_URL,
     siteName: "Reena Memorial",
     title: "Reena Memorial - In Loving Memory of a Compassionate Nurse",
     description:
@@ -77,6 +78,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-title": "Reena Memorial",
     "format-detection": "telephone=no",
   },
+  metadataBase: new URL(BASE_URL),
 };
 
 export default function RootLayout({

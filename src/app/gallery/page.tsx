@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { BASE_URL } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "Photo Gallery - Cherished Memories of Reena",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     title: "Photo Gallery - Cherished Memories of Reena",
     description:
       "A collection of cherished memories showcasing Reena's life, from her professional dedication as a nurse to precious moments with family, friends, and the community she loved serving.",
-    url: "https://reena-memorial.com/gallery",
+    url: `${BASE_URL}/gallery`,
     type: "website",
     images: [
       {
@@ -39,45 +40,45 @@ export const metadata: Metadata = {
     images: ["/images/gallery/mother.webp"],
   },
   alternates: {
-    canonical: "https://reena-memorial.com/gallery",
+    canonical: `${BASE_URL}/gallery`,
   },
 };
 
 const galleryStructuredData = {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
-  "@id": "https://reena-memorial.com/gallery#gallery",
+  "@id": `${BASE_URL}/gallery#gallery`,
   name: "Reena Memorial Photo Gallery",
   description:
     "A collection of cherished memories showcasing Reena's life, from her professional dedication as a nurse to precious moments with family, friends, and the community she loved serving.",
-  url: "https://reena-memorial.com/gallery",
+  url: `${BASE_URL}/gallery`,
   about: {
     "@type": "Person",
-    "@id": "https://reena-memorial.com/#person",
+    "@id": `${BASE_URL}/#person`,
     name: "Reena",
   },
   image: [
     {
       "@type": "ImageObject",
-      url: "https://reena-memorial.com/images/gallery/mother.webp",
+      url: `${BASE_URL}/images/gallery/mother.webp`,
       name: "Portrait of Reena",
       description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
     },
     {
       "@type": "ImageObject",
-      url: "https://reena-memorial.com/images/gallery/family.webp",
+      url: `${BASE_URL}/images/gallery/family.webp`,
       name: "Reena with Family",
       description: "Reena surrounded by family, displaying the love and joy she brought to those closest to her",
     },
     {
       "@type": "ImageObject",
-      url: "https://reena-memorial.com/images/gallery/caring.webp",
+      url: `${BASE_URL}/images/gallery/caring.webp`,
       name: "Reena Caring for Others",
       description: "Reena demonstrating her caring nature, comforting and helping others",
     },
     {
       "@type": "ImageObject",
-      url: "https://reena-memorial.com/images/gallery/nurse.webp",
+      url: `${BASE_URL}/images/gallery/nurse.webp`,
       name: "Reena in Nursing Uniform",
       description: "Reena in her nursing uniform, demonstrating her professional dedication to healthcare",
     },
