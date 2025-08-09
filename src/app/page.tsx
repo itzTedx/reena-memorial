@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
-  title: "Home - Honoring Reena's Legacy of Compassionate Care",
+  title: "Reena Memorial - In Loving Memory of a Compassionate Nurse",
   description:
     "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her compassion and dedication live on through nursing scholarships, community health projects, and acts of kindness.",
   openGraph: {
