@@ -30,8 +30,8 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className="-mt-[25vh] relative">
-        <div className="container relative max-w-7xl border-x px-0 pb-16">
+      <section className="relative">
+        <div className="-mt-[15%] container relative max-w-7xl border-x px-0 pb-16">
           <div className="relative bg-sky-200 p-2.5">
             <div className="grid grid-cols-12 rounded-2xl bg-white">
               <div className="col-span-5 flex flex-col justify-between border-r p-7">
