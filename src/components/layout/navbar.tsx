@@ -29,9 +29,7 @@ export function Navbar() {
             </Link>
           </li>
         </ul>
-        <Button className="rounded-full border-sky-200 border-b bg-gradient-to-b from-sky-700 to-sky-900">
-          Contact
-        </Button>
+        <Button>Contact</Button>
         <span aria-hidden="true" className="-bottom-1 -left-1 absolute z-1 size-1.5 rounded-full bg-white" />
         <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
       </div>
