@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { IconHeart } from "@/assets/icons/heart";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -31,7 +33,7 @@ export default function Home() {
         </div>
       </header>
       <section className="relative">
-        <div className="-mt-[15%] container relative max-w-7xl border-x px-0 pb-16">
+        <div className="-mt-[15ch] container relative max-w-7xl border-x px-0 pb-16">
           <div className="relative bg-sky-200 p-2.5">
             <div className="grid grid-cols-12 rounded-2xl bg-white">
               <div className="col-span-5 flex flex-col justify-between border-r p-7">
@@ -116,7 +118,7 @@ export default function Home() {
         <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
       </section>
       <Separator />
-      <section>
+      <section className="scroll-mt-12" id="mission">
         <div className="container relative max-w-7xl border-x px-0 py-20">
           <h2 className="mb-6 text-center font-medium font-sans text-2xl">Mission & Causes</h2>
           <div className="relative bg-sky-200 p-2.5">
@@ -170,7 +172,61 @@ export default function Home() {
       <Separator />
       <section>
         <div className="container relative max-w-7xl border-x px-0 py-20">
-          <h2 className="mb-6 text-center font-medium font-sans text-2xl">Mission & Causes</h2>
+          <div className="container grid grid-cols-2 gap-2">
+            <div className="grid gap-2">
+              <div className="grid h-fit grid-cols-2 gap-2">
+                <div className="relative aspect-6/4 overflow-hidden rounded-xl">
+                  <Image alt="Reena" className="object-cover" fill src="/images/happy-person.webp" />
+                </div>
+                <div className="relative aspect-6/4 overflow-hidden rounded-xl">
+                  <Image alt="Reena" className="object-cover" fill src="/images/nurse.webp" />
+                </div>
+              </div>
+              <div className="rounded-xl bg-white p-10">
+                <Badge>Photo Gallery</Badge>
+                <h2 className="mt-3 text-pretty font-light font-sans text-4xl">
+                  A collection of <br />
+                  <span className="font-medium">Cherished memories</span>
+                </h2>
+                <p className="mt-3 text-balance text-lg tracking-tight">
+                  From moments at work in her nursing uniform to time spent with family, friends, and the community she
+                  loved serving.
+                  <br />
+                  Through these images, we celebrate not only her professional dedication but also her warmth, joy, and
+                  vibrant spirit.
+                </p>
+                <Button className="mt-6">View gallery</Button>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="relative aspect-7/4 overflow-hidden rounded-xl">
+                <Image alt="Reena" className="object-cover" fill src="/images/caring.webp" />
+              </div>
+
+              <div className="flex gap-2">
+                <div className="overflow-hidden rounded-xl">
+                  <Image alt="Reena" height={247} src="/images/mother.webp" width={357} />
+                </div>
+                <div className="overflow-hidden rounded-xl">
+                  <Image alt="Reena" height={247} src="/images/family.webp" width={215} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <span aria-hidden="true" className="-bottom-1 -left-1 absolute z-1 size-1.5 rounded-full bg-white" />
+          <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
+        </div>
+      </section>
+      <Separator />
+      <section className="bg-gradient-to-b from-50% from-background to-50% to-sky-100">
+        <div className="container relative max-w-7xl border-x px-0 py-20">
+          <div className="container relative max-w-5xl overflow-hidden rounded-3xl bg-sky-500 py-12">
+            <p className="relative z-10 max-w-md text-pretty p-9 font-light font-sans text-4xl text-primary-foreground leading-snug">
+              Together, we can make life <span className="font-medium">kinder and happier,</span> as Reena always did.
+            </p>
+            <div className="absolute inset-0 z-1 bg-gradient-to-r from-25% from-sky-500 to-85% to-transparent" />
+            <Image alt="" className="object-cover" fill src="/images/cta-bg.webp" />
+          </div>
         </div>
       </section>
     </main>
