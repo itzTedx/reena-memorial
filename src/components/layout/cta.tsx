@@ -29,9 +29,6 @@ export function Cta() {
             role="img"
             src="/images/cta-bg.webp"
           />
-          <span className="sr-only" id="cta-image-desc">
-            Decorative background image representing the warm, caring community that reflects Reena's values and impact
-          </span>
         </article>
       </div>
     </section>
