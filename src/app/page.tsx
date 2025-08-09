@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main>
       <header className="bg-sky-100">
-        <div className="container relative grid max-w-7xl grid-cols-12 border-x">
-          <div className="col-span-7 py-28 pr-24">
+        <div className="container relative grid max-w-7xl grid-cols-12 border-x pr-0">
+          <div className="col-span-7 max-w-xl py-28">
             <Badge variant="outline">Empowering People. Enriching Communities.</Badge>
             <h1 className="mt-4 font-sans text-7xl">
               In loving memory of <span className="font-medium text-sky-600">Reena</span>
@@ -25,6 +25,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative col-span-5 border-l">
+            <Image alt="Reena" className="object-cover" fill src="/images/gallery/mother.webp" />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-background to-50% to-transparent" />
             <div className="-top-1 -left-1 absolute z-1999 size-1.5 rounded-full bg-white" />
           </div>
         </div>
