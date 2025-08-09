@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { BASE_URL } from "@/data/constants";
+import { getGalleryImages } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Photo Gallery - Cherished Memories of Reena",
@@ -57,40 +58,16 @@ const galleryStructuredData = {
     "@id": `${BASE_URL}/#person`,
     name: "Reena",
   },
-  image: [
-    {
-      "@type": "ImageObject",
-      url: `${BASE_URL}/images/gallery/mother.webp`,
-      name: "Portrait of Reena",
-      description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
-    },
-    {
-      "@type": "ImageObject",
-      url: `${BASE_URL}/images/gallery/family.webp`,
-      name: "Reena with Family",
-      description: "Reena surrounded by family, displaying the love and joy she brought to those closest to her",
-    },
-    {
-      "@type": "ImageObject",
-      url: `${BASE_URL}/images/gallery/caring.webp`,
-      name: "Reena Caring for Others",
-      description: "Reena demonstrating her caring nature, comforting and helping others",
-    },
-    {
-      "@type": "ImageObject",
-      url: `${BASE_URL}/images/gallery/nurse.webp`,
-      name: "Reena in Nursing Uniform",
-      description: "Reena in her nursing uniform, demonstrating her professional dedication to healthcare",
-    },
-  ],
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const galleryImages = await getGalleryImages();
+
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryStructuredData) }} type="application/ld+json" />
       <main>
-        <header className="container relative grid max-w-7xl grid-cols-1 gap-8 border-x px-4 pt-16 pb-12 md:grid-cols-2 md:gap-20 md:px-0 md:pt-28 md:pb-20">
+        <header className="container relative grid max-w-7xl grid-cols-1 gap-8 border-x pt-16 pb-12 md:grid-cols-2 md:gap-20 md:pt-28 md:pb-20">
           <div>
             <Badge>Photo Gallery</Badge>
             <h1 className="mt-3 font-light font-sans text-3xl md:text-4xl">
@@ -106,42 +83,27 @@ export default function GalleryPage() {
             vibrant spirit.
           </p>
         </header>
-        <div className="container relative max-w-7xl columns-1 gap-3 space-y-3 border-x px-4 pb-16 sm:columns-2 md:px-0 md:pb-28">
-          <Image
-            alt="Portrait of Reena - a compassionate nurse who dedicated her life to caring for others"
-            className="h-auto w-full rounded-xl"
-            height={247}
-            src="/images/gallery/mother.webp"
-            width={720}
-          />
-          <Image
-            alt="Reena surrounded by family, displaying the love and joy she brought to those closest to her"
-            className="h-auto w-full rounded-xl"
-            height={247}
-            src="/images/gallery/family.webp"
-            width={720}
-          />
-          <Image
-            alt="Reena demonstrating her caring nature, comforting and helping others"
-            className="h-auto w-full rounded-xl"
-            height={247}
-            src="/images/gallery/caring.webp"
-            width={720}
-          />
-          <Image
-            alt="Reena in her community, showing the warm and caring environment she helped create"
-            className="h-auto w-full rounded-xl"
-            height={247}
-            src="/images/cta-bg.webp"
-            width={720}
-          />
-          <Image
-            alt="Reena in her nursing uniform, demonstrating her professional dedication to healthcare"
-            className="h-auto w-full rounded-xl"
-            height={247}
-            src="/images/gallery/nurse.webp"
-            width={720}
-          />
+
+        {/* Gallery Grid */}
+        <div className="container relative max-w-7xl columns-1 gap-3 space-y-3 border-x pb-16 sm:columns-2 md:pb-28">
+          {galleryImages.length > 0
+            ? galleryImages.map((image) => (
+                <div className="group relative" key={image.id}>
+                  <Image
+                    alt={image.alt ?? "Gallery image"}
+                    className="h-auto w-full rounded-xl"
+                    height={600}
+                    src={image.url}
+                    width={800}
+                  />
+                  {image.caption && (
+                    <div className="absolute inset-0 flex items-end rounded-xl bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
+                      <p className="p-4 text-sm text-white">{image.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))
+            : null}
 
           <span aria-hidden="true" className="-bottom-1 -left-1 absolute z-1 size-1.5 rounded-full bg-white" />
           <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
