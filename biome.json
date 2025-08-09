@@ -1,30 +1,15 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
-  "files": {
-    "ignoreUnknown": false,
-    "includes": [
-      "**",
-      "!**/.next",
-      "!**/dist",
-      "!**/.turbo",
-      "!**/dev-dist",
-      "!**/.zed",
-      "!**/.vscode",
-      "!**/routeTree.gen.ts",
-      "!**/src-tauri",
-      "!**/.nuxt",
-      "!bts.jsonc",
-      "!**/.expo",
-      "!**/.wrangler",
-      "!**/.source"
-    ]
-  },
   "vcs": {
     "enabled": false,
     "clientKind": "git",
     "useIgnoreFile": false
   },
 
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**", "!**/.next", "!**/.vscode"]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -37,6 +22,72 @@
     "bracketSpacing": true,
     "expand": "auto",
     "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "a11y": {
+        "noAriaUnsupportedElements": "warn",
+        "useAltText": "warn",
+        "useAriaPropsForRole": "warn",
+        "useValidAriaProps": "warn",
+        "useValidAriaValues": "warn"
+      },
+      "complexity": {
+        "noUselessThisAlias": "error",
+        "noUselessTypeConstraint": "error",
+        "useArrowFunction": "error"
+      },
+      "correctness": {
+        "recommended": true,
+        "noUnusedImports": {
+          "level": "warn",
+          "fix": "safe"
+        },
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "info",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "error"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "functions": ["clsx", "cva", "cn"]
+          }
+        }
+      },
+      "style": {
+        "noParameterAssign": "error",
+        "noCommonJs": "error",
+        "noNamespace": "error",
+        "useArrayLiterals": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useBlockStatements": "off",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error",
+        "useTemplate": "error",
+        "noProcessEnv": {
+          "level": "error"
+        }
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noExtraNonNullAssertion": "error",
+        "noMisleadingInstantiator": "error",
+        "noUnsafeDeclarationMerging": "error",
+        "useNamespaceKeyword": "error",
+        "noDuplicateJsxProps": "error"
+      }
+    }
   },
   "javascript": {
     "formatter": {
@@ -51,6 +102,7 @@
       "bracketSpacing": true
     }
   },
+
   "html": { "formatter": { "selfCloseVoidElements": "always" } },
   "assist": {
     "enabled": true,
@@ -80,6 +132,5 @@
         }
       }
     }
-  },
-  "extends": ["ultracite"]
+  }
 }
