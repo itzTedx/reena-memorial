@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 import { Logo, LogoWordMark } from "@/assets/logo";
 
 import { Button } from "../ui/button";
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 
 export function Navbar() {
   return (
@@ -30,9 +30,8 @@ export function Navbar() {
             href="/"
           >
             <Logo />
-            <div className="hidden sm:block">
-              <LogoWordMark />
-            </div>
+
+            <LogoWordMark />
           </Link>
 
           {/* Desktop Navigation */}
@@ -106,11 +105,20 @@ export function Navbar() {
             >
               <SheetHeader>
                 <SheetTitle className="text-left font-sans text-xl" id="mobile-menu-title">
-                  Navigation Menu
+                  <p className="sr-only">Reena Memorial</p>
+                  <Link
+                    aria-label="Reena Memorial - Home"
+                    className="flex items-center gap-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"
+                    href="/"
+                  >
+                    <Logo />
+
+                    <LogoWordMark />
+                  </Link>
                 </SheetTitle>
-                <p className="sr-only" id="mobile-menu-desc">
+                <SheetDescription className="sr-only" id="mobile-menu-desc">
                   Mobile navigation menu with links to main sections of the website
-                </p>
+                </SheetDescription>
               </SheetHeader>
               <nav aria-label="Mobile navigation" className="mt-4 flex flex-col gap-2 px-4 font-sans" role="navigation">
                 <SheetClose asChild>

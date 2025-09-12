@@ -65,7 +65,7 @@ export const Gallery = () => {
               />
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 md:flex-row">
               <Image
                 alt="Reena with family members, showing her loving relationships and personal connections"
                 className="rounded-xl object-cover saturate-0 transition-[filter] duration-300 hover:saturate-100"
