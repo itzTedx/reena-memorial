@@ -68,7 +68,7 @@ export default async function GalleryPage() {
     <>
       <Script dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryStructuredData) }} type="application/ld+json" />
       <main>
-        <header className="container relative grid max-w-7xl grid-cols-1 gap-8 border-x pt-16 pb-12 md:grid-cols-2 md:gap-20 md:pt-28 md:pb-20">
+        <header className="container relative grid max-w-7xl grid-cols-1 gap-8 border-x pt-9 pb-12 md:grid-cols-2 md:gap-20 md:pt-14 md:pb-20">
           <div>
             <Badge>Photo Gallery</Badge>
             <h1 className="mt-3 font-light font-sans text-3xl md:text-4xl">
@@ -86,7 +86,7 @@ export default async function GalleryPage() {
         </header>
 
         {/* Gallery Grid */}
-        <div className="container relative max-w-7xl columns-1 gap-3 space-y-3 border-x pb-16 sm:columns-2 md:pb-28">
+        <div className="container relative max-w-7xl columns-1 gap-3 space-y-3 border-x pb-16 sm:columns-2 md:columns-3 md:pb-28">
           {galleryImages.length > 0
             ? galleryImages.map((image) => (
                 <div className="group relative" key={image.id}>

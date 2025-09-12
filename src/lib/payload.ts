@@ -1,13 +1,14 @@
 import config from "@payload-config";
 import { getPayload } from "payload";
 
+export const payload = await getPayload({ config });
+
 export async function getGalleryImages() {
   try {
-    const payload = await getPayload({ config });
-
     const result = await payload.find({
       collection: "gallery",
       sort: "-createdAt",
+      limit: 1000,
     });
 
     return result.docs;
