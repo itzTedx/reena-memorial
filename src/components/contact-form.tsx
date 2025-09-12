@@ -77,9 +77,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="px-3">Message</FormLabel>
+              <FormLabel className="sr-only">Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Message" {...field} />
+                <Textarea className="min-h-28" placeholder="Message" {...field} />
               </FormControl>
 
               <FormMessage />
