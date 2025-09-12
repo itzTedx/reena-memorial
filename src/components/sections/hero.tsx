@@ -46,7 +46,7 @@ export const Hero = () => {
             className="object-cover"
             fill
             priority
-            src="/images/gallery/mother.webp"
+            src="/images/hero.webp"
           />
           <div
             aria-hidden="true"

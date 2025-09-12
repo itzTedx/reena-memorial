@@ -1,6 +1,5 @@
 import { IconHands } from "@/assets/icons/hand";
 import { IconHandHeart } from "@/assets/icons/hand-heart";
-import { IconHeart2 } from "@/assets/icons/heart";
 
 import { Button } from "../ui/button";
 
@@ -14,8 +13,8 @@ export const Donation = () => {
         <p className="mb-6 px-6 text-center text-base text-muted-foreground md:px-0 md:text-lg">
           Be Part of Reena’s Legacy
         </p>
-        <div className="container relative max-w-6xl">
-          <div className="grid grid-cols-1 gap-3 rounded-xl bg-white/70 p-2 backdrop-blur-md md:grid-cols-3 md:p-3">
+        <div className="container relative max-w-5xl">
+          <div className="grid grid-cols-1 gap-3 rounded-xl bg-white/70 p-2 backdrop-blur-md md:grid-cols-2 md:p-3">
             <article className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-xl border bg-white p-5 shadow-sm transition-transform duration-200 focus-within:ring-2 focus-within:ring-sky-500">
               <header className="mb-3 flex items-start gap-3">
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sky-700 ring-1 ring-sky-200">
@@ -37,7 +36,7 @@ export const Donation = () => {
                 </Button>
               </div>
             </article>
-            <article className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-xl border bg-white p-5 shadow-sm transition-transform duration-200 focus-within:ring-2 focus-within:ring-sky-500">
+            {/* <article className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-xl border bg-white p-5 shadow-sm transition-transform duration-200 focus-within:ring-2 focus-within:ring-sky-500">
               <header className="mb-3 flex items-start gap-3">
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 ring-1 ring-emerald-200">
                   <IconHeart2 />
@@ -57,7 +56,7 @@ export const Donation = () => {
                   Make a Gift
                 </Button>
               </div>
-            </article>
+            </article> */}
             <article className="group hover:-translate-y-0.5 flex flex-col justify-between rounded-xl border bg-white p-5 shadow-sm transition-transform duration-200 focus-within:ring-2 focus-within:ring-sky-500">
               <header className="mb-3 flex items-start gap-3">
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700 ring-1 ring-indigo-200">

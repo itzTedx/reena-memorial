@@ -11,20 +11,20 @@ export const Gallery = () => {
         <div className="container grid grid-cols-1 gap-4 md:gap-2 lg:grid-cols-2">
           <div className="grid gap-2">
             <div aria-labelledby="preview-images-desc" className="grid h-fit grid-cols-2 gap-2" role="img">
-              <div className="relative aspect-6/4 overflow-hidden rounded-xl">
+              <div className="relative aspect-6/4 overflow-hidden rounded-xl saturate-0 transition-[filter] duration-300 hover:saturate-100">
                 <Image
                   alt="Reena smiling warmly, showing her joyful and caring personality"
                   className="object-cover"
                   fill
-                  src="/images/happy-person.webp"
+                  src="/images/image-1.webp"
                 />
               </div>
-              <div className="relative aspect-6/4 overflow-hidden rounded-xl">
+              <div className="relative aspect-6/4 overflow-hidden rounded-xl saturate-0 transition-[filter] duration-300 hover:saturate-100">
                 <Image
                   alt="Reena in her nursing uniform, demonstrating her professional dedication to healthcare"
                   className="object-cover"
                   fill
-                  src="/images/nurse.webp"
+                  src="/images/nurses.webp"
                 />
               </div>
             </div>
@@ -56,29 +56,29 @@ export const Gallery = () => {
             </article>
           </div>
           <div className="space-y-2">
-            <div className="relative aspect-7/4 overflow-hidden rounded-xl">
+            <div className="relative aspect-7/4 overflow-hidden rounded-xl saturate-0 transition-[filter] duration-300 hover:saturate-100">
               <Image
                 alt="Reena demonstrating her caring nature, comforting and helping others"
                 className="object-cover"
                 fill
-                src="/images/caring.webp"
+                src="/images/image-2.webp"
               />
             </div>
 
             <div className="flex gap-2">
               <Image
                 alt="Reena with family members, showing her loving relationships and personal connections"
-                className="rounded-xl object-cover"
+                className="rounded-xl object-cover saturate-0 transition-[filter] duration-300 hover:saturate-100"
                 height={247}
-                src="/images/mother.webp"
+                src="/images/image-3.webp"
                 width={357}
               />
 
               <Image
                 alt="Reena surrounded by family, displaying the love and joy she brought to those closest to her"
-                className="rounded-xl object-cover"
+                className="rounded-xl object-cover saturate-0 transition-[filter] duration-300 hover:saturate-100"
                 height={247}
-                src="/images/family.webp"
+                src="/images/image-4.webp"
                 width={215}
               />
             </div>
