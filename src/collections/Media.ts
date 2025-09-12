@@ -1,10 +1,10 @@
-import type { CollectionConfig } from "payload";
+import type { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
-  slug: "gallery",
+  slug: 'gallery',
   labels: {
-    singular: "Gallery Image",
-    plural: "Gallery",
+    singular: 'Gallery Image',
+    plural: 'Gallery',
   },
   access: {
     read: () => true,
@@ -12,38 +12,38 @@ export const Media: CollectionConfig = {
 
   fields: [
     {
-      name: "alt",
-      type: "text",
+      name: 'alt',
+      type: 'text',
 
       admin: {
-        description: "Describe this image for accessibility",
+        description: 'Describe this image for accessibility',
       },
     },
     {
-      name: "caption",
-      type: "textarea",
+      name: 'caption',
+      type: 'textarea',
       admin: {
-        description: "Optional caption for this image",
+        description: 'Optional caption for this image',
       },
     },
   ],
   upload: {
-    staticDir: "public/images/gallery",
+    staticDir: 'public/images/gallery',
     imageSizes: [
       {
-        name: "thumbnail",
+        name: 'thumbnail',
         width: 400,
         height: 300,
-        position: "centre",
+        position: 'centre',
       },
       {
-        name: "medium",
+        name: 'medium',
         width: 800,
         height: 600,
-        position: "centre",
+        position: 'centre',
       },
     ],
-    adminThumbnail: "thumbnail",
-    mimeTypes: ["image/*"],
+    adminThumbnail: 'thumbnail',
+    mimeTypes: ['image/*'],
   },
-};
+}

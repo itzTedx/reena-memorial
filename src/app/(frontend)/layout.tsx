@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
+import "./globals.css";
 
 import { didactGothic, helvetica } from "@/assets/fonts";
 import { Cta } from "@/components/layout/cta";

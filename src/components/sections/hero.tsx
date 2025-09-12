@@ -43,7 +43,7 @@ export const Hero = () => {
         <div className="relative col-span-1 h-64 md:h-80 md:border-l lg:col-span-5 lg:h-auto">
           <Image
             alt="Portrait of Reena - a compassionate nurse who dedicated her life to caring for others"
-            className="object-cover"
+            className="object-cover max-md:object-top"
             fill
             priority
             src="/images/hero.webp"

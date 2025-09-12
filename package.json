@@ -1,14 +1,16 @@
 {
   "name": "reena-memorial",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A blank template to get started with Payload 3.0",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
-    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build --turbopack",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
     "lint": "biome lint",
     "lint:fix": "biome lint --write",
     "check": "oxlint"
@@ -18,6 +20,7 @@
     "@payloadcms/db-postgres": "^3.55.1",
     "@payloadcms/db-sqlite": "^3.55.1",
     "@payloadcms/next": "^3.55.1",
+    "@payloadcms/payload-cloud": "^3.55.1",
     "@payloadcms/richtext-lexical": "^3.55.1",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
@@ -27,7 +30,7 @@
     "cross-env": "^10.0.0",
     "graphql": "^16.11.0",
     "lucide-react": "^0.539.0",
-    "next": "15.4.6",
+    "next": "15.5.3",
     "payload": "^3.55.1",
     "radix-ui": "latest",
     "react": "19.1.0",
@@ -40,7 +43,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^24.3.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "oxlint": "^1.11.0",
@@ -48,5 +51,12 @@
     "tw-animate-css": "^1.3.6",
     "typescript": "^5",
     "ultracite": "^5.1.2"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0",
+    "pnpm": "^9 || ^10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp", "esbuild", "unrs-resolver", "@tailwindcss/oxide"]
   }
 }

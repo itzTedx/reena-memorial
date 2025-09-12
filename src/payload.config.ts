@@ -1,4 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
+import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
 import { buildConfig } from "payload";
@@ -26,11 +27,12 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URL || "",
+      connectionString: process.env.DATABASE_URI || "",
     },
   }),
   sharp,
   plugins: [
+    payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
 });
