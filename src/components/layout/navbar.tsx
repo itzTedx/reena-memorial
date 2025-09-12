@@ -23,7 +23,7 @@ export function Navbar() {
         className="sticky top-0 z-999 overflow-x-clip border-b bg-sky-100/60 backdrop-blur-3xl"
         role="navigation"
       >
-        <div className="container relative mx-auto flex max-w-7xl items-center justify-between border-x px-4 py-2 lg:px-0">
+        <div className="container relative mx-auto flex max-w-7xl items-center justify-between border-x py-2">
           <Link
             aria-label="Reena Memorial - Home"
             className="flex items-center gap-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"

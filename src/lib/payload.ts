@@ -8,7 +8,6 @@ export async function getGalleryImages() {
     const result = await payload.find({
       collection: "gallery",
       sort: "-createdAt",
-      limit: 100,
     });
 
     return result.docs;

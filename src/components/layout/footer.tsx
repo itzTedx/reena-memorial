@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+import { IconEmail } from "@/assets/icons/email";
 import { IconHeart } from "@/assets/icons/heart";
+import { IconPhone } from "@/assets/icons/phone";
 
 import { ContactForm } from "../contact-form";
 import { Badge } from "../ui/badge";
@@ -20,6 +22,20 @@ export function Footer() {
             <h2 className="font-light font-sans text-2xl md:text-3xl" id="footer-message-heading">
               Keep Reena's spirit alive by <span className="font-medium">making a difference</span> in other's lives.
             </h2>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 font-medium">
+                <IconEmail className="size-3" />
+                <Link className="hover:underline" href="mailto:support@reenalives.org">
+                  support@reenalives.org
+                </Link>
+              </li>
+              <li className="flex items-center gap-2 font-medium">
+                <IconPhone className="size-3" />
+                <Link className="hover:underline" href="tel:+971-XXX-XXXXXX">
+                  +971-XXX-XXXXXX
+                </Link>
+              </li>
+            </ul>
           </section>
           <section
             aria-labelledby="contact-section-heading"
@@ -30,9 +46,8 @@ export function Footer() {
                 <h3 className="font-sans text-lg md:text-xl" id="contact-section-heading">
                   We welcome your stories, tributes, and messages of support.
                 </h3>
-                <p className="mt-2 text-balance text-sm md:text-base" id="contact-description">
-                  Whether you'd like to share a memory of Reena, learn more about our initiatives, or find out how to
-                  contribute, please reach out.
+                <p className="mt-2 text-balance text-sm tracking-tight md:text-base" id="contact-description">
+                  Want to contribute, collaborate, or just share a memory of Reena? We’d love to hear from you.
                 </p>
               </header>
               <div
