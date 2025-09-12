@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -65,7 +66,7 @@ export default async function GalleryPage() {
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryStructuredData) }} type="application/ld+json" />
+      <Script dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryStructuredData) }} type="application/ld+json" />
       <main>
         <header className="container relative grid max-w-7xl grid-cols-1 gap-8 border-x pt-16 pb-12 md:grid-cols-2 md:gap-20 md:pt-28 md:pb-20">
           <div>

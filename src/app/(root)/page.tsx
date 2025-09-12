@@ -135,12 +135,18 @@ export default function Home() {
               <Badge aria-label="Mission statement" role="text" variant="outline">
                 Empowering People. Enriching Communities.
               </Badge>
-              <h1 className="mt-4 font-sans text-4xl md:text-5xl lg:text-7xl">
-                In loving memory of <span className="font-medium text-sky-600">Reena</span>
+              <h1 className="mt-4 font-medium font-sans text-4xl tracking-tight md:text-5xl">
+                <span className="font-semibold text-sky-600"> Reena Lives </span> - Continuing a Legacy of Compassion
+                and Care
               </h1>
-              <p className="mt-3 text-lg leading-relaxed tracking-tight md:text-xl">
-                Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her
-                compassion and dedication live on through the lives she touched and the causes she cared about.
+              <p className="mt-3 text-lg leading-relaxed tracking-tight">
+                Reena was not only a devoted nurse but also a selfless soul who touched countless lives through her
+                service and compassion. Though she has left us, her spirit lives on in every act of kindness we extend.{" "}
+                <Link className="font-medium text-sky-600 hover:underline" href="http://reenalives.org/">
+                  reenalives.org
+                </Link>{" "}
+                is a humble initiative to continue her work - by supporting community health, empowering women in
+                healthcare, and spreading hope where it’s needed most.
               </p>
               <div className="mt-6 flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
                 <Button aria-describedby="story-button-desc" asChild className="w-full sm:w-auto">
