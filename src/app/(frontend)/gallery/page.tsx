@@ -5,7 +5,7 @@ import Script from "next/script";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { BASE_URL } from "@/data/constants";
-import { getGalleryImages } from "@/lib/payload";
+import { getGallery } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Photo Gallery - Cherished Memories of Reena",
@@ -62,7 +62,7 @@ const galleryStructuredData = {
 };
 
 export default async function GalleryPage() {
-  const galleryImages = await getGalleryImages();
+  const gallery = await getGallery();
 
   return (
     <>
@@ -87,16 +87,18 @@ export default async function GalleryPage() {
 
         {/* Gallery Grid */}
         <div className="container relative max-w-7xl columns-1 gap-3 space-y-3 border-x pb-16 sm:columns-2 md:columns-3 md:pb-28">
-          {galleryImages.length > 0
-            ? galleryImages.map((image) => (
+          {gallery.length > 0
+            ? gallery.map((image) => (
                 <div className="group relative" key={image.id}>
-                  <Image
-                    alt={image.alt ?? "Gallery image"}
-                    className="h-auto w-full rounded-xl"
-                    height={600}
-                    src={image.url}
-                    width={800}
-                  />
+                  {image.url && (
+                    <Image
+                      alt={image.alt ?? "Gallery image"}
+                      className="h-auto w-full rounded-xl"
+                      height={600}
+                      src={image.url}
+                      width={800}
+                    />
+                  )}
                   {image.caption && (
                     <div className="absolute inset-0 flex items-end rounded-xl bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
                       <p className="p-4 text-sm text-white">{image.caption}</p>

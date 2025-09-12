@@ -3,7 +3,7 @@ import { getPayload } from "payload";
 
 export const payload = await getPayload({ config });
 
-export async function getGalleryImages() {
+export async function getGallery() {
   try {
     const result = await payload.find({
       collection: "gallery",
