@@ -26,13 +26,13 @@ export function Footer() {
               <li className="flex items-center gap-2 font-medium">
                 <IconEmail className="size-3" />
                 <Link className="hover:underline" href="mailto:support@reenalives.org">
-                  support@reenalives.org
+                  info@reenalives.org
                 </Link>
               </li>
               <li className="flex items-center gap-2 font-medium">
                 <IconPhone className="size-3" />
-                <Link className="hover:underline" href="tel:+971-XXX-XXXXXX">
-                  +971-XXX-XXXXXX
+                <Link className="hover:underline" href="tel:+918078065555">
+                  +91 807 806 5555
                 </Link>
               </li>
             </ul>

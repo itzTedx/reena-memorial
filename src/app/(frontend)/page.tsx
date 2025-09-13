@@ -43,7 +43,7 @@ const structuredData = {
       knowsAbout: ["Nursing", "Healthcare", "Patient Care", "Community Service", "Mentorship"],
       image: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/images/gallery/mother.webp`,
+        url: `${BASE_URL}/images/gallery/image-2.webp`,
         description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
       },
     },
@@ -54,7 +54,7 @@ const structuredData = {
       url: BASE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/images/gallery/mother.webp`,
+        url: `${BASE_URL}/images/gallery/image-2.webp`,
       },
       description:
         "A memorial foundation dedicated to continuing Reena's legacy through nursing scholarships, community health projects, and acts of kindness.",
@@ -115,7 +115,7 @@ const structuredData = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/images/gallery/mother.webp`,
+        url: `${BASE_URL}/images/gallery/image-2.webp`,
         description: "Portrait of Reena - a compassionate nurse who dedicated her life to caring for others",
       },
       datePublished: "2024-01-01T00:00:00Z",
