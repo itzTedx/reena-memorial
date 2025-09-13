@@ -17,8 +17,8 @@ export const Hero = () => {
             Care
           </h1>
           <p className="mt-3 text-lg leading-relaxed tracking-tight">
-            Reena was not only a devoted nurse but also a selfless soul who touched countless lives through her service
-            and compassion. Though she has left us, her spirit lives on in every act of kindness we extend.{" "}
+            Reena Liju was not only a devoted nurse but also a selfless soul who touched countless lives through her
+            service and compassion. Though she has left us, her spirit lives on in every act of kindness we extend.{" "}
             <Link className="font-medium text-sky-600 hover:underline" href="http://reena.org/">
               reena.org
             </Link>{" "}

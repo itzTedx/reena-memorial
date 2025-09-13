@@ -11,9 +11,9 @@ import { BASE_URL } from "@/data/constants";
 import { Hero } from "../../components/sections/hero";
 
 export const metadata: Metadata = {
-  title: "Reena Memorial - In Loving Memory of a Compassionate Nurse",
+  title: "Reena Liju Memorial - In Loving Memory of a Compassionate Nurse",
   description:
-    "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her compassion and dedication live on through nursing scholarships, community health projects, and acts of kindness.",
+    "Reena Liju was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met. Her compassion and dedication live on through nursing scholarships, community health projects, and acts of kindness.",
   openGraph: {
     title: "Reena Memorial - Honoring a Compassionate Nurse's Legacy",
     description:
@@ -22,8 +22,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    title: "Reena Memorial - Honoring a Compassionate Nurse's Legacy",
-    description: "Reena was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met.",
+    title: "Reena Liju Memorial - Honoring a Compassionate Nurse's Legacy",
+    description:
+      "Reena Liju was more than a nurse — she was a friend, a mentor, and a source of hope for everyone she met.",
   },
   alternates: {
     canonical: BASE_URL,
@@ -36,7 +37,7 @@ const structuredData = {
     {
       "@type": "Person",
       "@id": `${BASE_URL}/#person`,
-      name: "Reena",
+      name: "Reena Liju",
       jobTitle: "Nurse",
       description:
         "A dedicated nurse who touched countless lives with compassion and kindness, known for her warm heart, professional dedication, and commitment to caring for others.",

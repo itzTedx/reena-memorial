@@ -21,8 +21,8 @@ export const Story = () => {
           </h2>
           <div className="mt-3 whitespace-pre-line font-light font-sans text-sky-950/80 text-xl leading-relaxed md:text-2xl lg:text-3xl">
             <p>
-              <span className="font-medium text-sky-950">Reena Mathew dedicated her life to nursing</span> — not just as
-              a profession, but as a calling. Her care extended beyond hospital walls. She volunteered in rural clinics,
+              <span className="font-medium text-sky-950">Reena Liju dedicated her life to nursing</span> — not just as a
+              profession, but as a calling. Her care extended beyond hospital walls. She volunteered in rural clinics,
               mentored young women to enter the medical field, and stood as a pillar of support in her community during
               times of crisis. Her warmth, dedication, and humility made her unforgettable.
             </p>
