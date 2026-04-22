@@ -68,20 +68,20 @@ export function Footer() {
         <span aria-hidden="true" className="-bottom-1 -right-1 absolute z-1 size-1.5 rounded-full bg-white" />
       </div>
       <div aria-label="Footer credits section" className="border-t">
-        <div className="container relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 border-x px-4 py-4 text-center md:flex-row md:gap-0 md:text-left lg:px-0">
+        <div className="container relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 border-x px-4 py-4 text-center md:flex-row md:gap-0 md:text-left">
           <p className="text-sm md:text-base">
             <span aria-label="Copyright symbol">©</span> 2025 Reena Memorial - Honoring a life of care and compassion.
           </p>
           <p className="text-sm md:text-base">
             Website designed & developed by{" "}
             <Link
-              aria-label="Visit Ziron Media website (opens in new tab)"
+              aria-label="Visit ZironPro website (opens in new tab)"
               className="rounded underline hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"
-              href="https://www.zironmedia.com"
+              href="https://www.zironpro.ae?utm_source=reenalives&amp;utm_medium=website&amp;utm_campaign=footer_credit&amp;utm_content=designed_by"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Ziron Media
+              ZironPro
             </Link>
           </p>
         </div>
